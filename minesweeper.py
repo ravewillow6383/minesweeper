@@ -2,14 +2,13 @@ from random import randint
 
 # global constants
 width = 40
-NUM_BOMBS = 10
+NUM_BOMB = 10
 
 class Tile:
     def __init__(self):
         self.bomb = False
         
 grid = [[Tile() for n in range(9)] for n in range (9)]
-
 
 #Place 10 bombs at random tiles
 for n in range(NUM_BOMB):
@@ -37,3 +36,4 @@ def draw():
             x += width
         y+=width
 
+print(grid)
