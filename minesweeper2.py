@@ -42,14 +42,21 @@ def reset():
 
         reset()
 
-    grid = [[0 for n in range(9)] for n in range (9)]
+    b = [[0 for n in range(9)] for n in range (9)]
 
     for n in range(0, 10):
-        placeBomb(b)
+        place_bomb(b)
+    
+    print(b)
 
-def placeBomb(b):
-    r = randomint(0, 8)
-    c = randomint(0, 8)
+def place_bomb(b):
+    r = randint(0, 8)
+    c = randint(0, 8)
+    current_row = b[r]
+    if not current_row[c] == '*':
+        current_row[c] == '*'
+    else:
+        place_bomb(b)
 
 
 reset()
