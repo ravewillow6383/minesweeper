@@ -31,18 +31,18 @@ def reset():
 
     """)
 
-    choice = input('Type here '),upper()
+    choice = input('Type here ').upper()
 
     if choice == 'I':
-        clear()
+
         print(open('instructions.txt', 'r').read())
 
         input('press [enter] when ready to play. ')
     elif choice != 'P':
-        clear()
+
         reset()
 
-    grid = [[0 for n in range(columns)] for n in range (rows)]
+    grid = [[0 for n in range(9)] for n in range (9)]
 
     for n in range(0, 10):
         placeBomb(b)
@@ -50,6 +50,6 @@ def reset():
 def placeBomb(b):
     r = randomint(0, 8)
     c = randomint(0, 8)
-    
+
 
 reset()
